@@ -4,7 +4,6 @@
   }
   p {
     font-size: 18px;
-    margin: 20px;
   }
   body {
     margin: 0px;
@@ -46,6 +45,7 @@
     max-width: 100%;
     min-height: calc(100vh - var(--banner-height));
   }
+  .content { padding: 20px;}
   .nav {
     text-align: center;
   }

@@ -2,10 +2,8 @@
 <head>
 <meta charset="UTF-8">
 <link href="/assets/styles.css" rel="stylesheet">
-
-{% assign nextpage = page.next.url %}
-
-{% if nextpage == nil %}
+<!-- If this is the index page make the title only show the site name -->
+{% if page.url == "/" %}
 <title>{{ site.title }}</title>
 {% else %}
 <title>{{ page.title }} | {{ site.title }}</title>
@@ -20,34 +18,18 @@
 		<div class="main">
 			<h1>Down The Sun Goes</h1>
 			<div class="content">
-
-				{% if nextpage == nil %}
+				<!-- If this is the index page, get the latest comic's title -->
+				{% if page.url == "/" %}
 				<h2>{{ site.posts[0].title }}</h2>
 				{% else %}
 				<h2>{{ page.title }}</h2>
 				{% endif %}
 
-				<div class="nav">
-					{% if page.previous.url == nil and nextpage == nil %}
-					<a href="{{ page.firstcomic }}">First</a>
-					<a href="{{ site.posts[1].url }}">Previous</a>
-					{% elsif page.previous.url == nil %}
-					<a class="disabled">First</a>
-					<a class="disabled">Previous</a>
-					{% else %}
-					<a href="{{ page.firstcomic }}">First</a>
-					<a href="{{ page.previous.url }}">Previous</a>
-					{% endif %}
+				<!-- If this page is a comic, include the nav buttons -->
+				{% if page.is_post %}
+				{% include navigation.html %}
+				{% endif %}
 
-					{% if nextpage == nil %}
-					<a class="disabled">Next</a>
-					<a class="disabled">Latest</a>
-					{% else %}
-					<a href="{{ page.next.url }}">Next</a>
-					<a href="{{ site.url }}">Latest</a>
-					{% endif %}
-
-				</div>
 				{{ content }}
 
 				<h2>Other Things:</h2>

@@ -20,6 +20,12 @@ defaults:
     values:
       layout: default
       firstcomic: "/conclusion/"
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
       
 exclude:
   - .sass-cache/
