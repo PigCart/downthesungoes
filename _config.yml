@@ -1,0 +1,35 @@
+title: Down The Sun Goes
+description: Dumb comics and blogs by Machary / PigCart
+url: https://downthesungoes.com
+
+collections:
+  articles:
+    output: true
+    permalink: /:name/
+  posts:
+    permalink: /:title/
+    
+# Build settings
+plugins:
+  - jekyll-feed
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      firstcomic: "/conclusion/"
+      
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - view-site.bat

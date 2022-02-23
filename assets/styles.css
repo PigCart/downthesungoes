@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "DINish";
+    src: url(/assets/Dinish-Regular.woff2);
+  }
+  p {
+    font-size: 18px;
+    margin: 20px;
+  }
+  body {
+    margin: 0px;
+    --banner-height: 200px;
+    --content-margin: 20px;
+    --blue: rgb(49, 10, 112);
+    min-width: fit-content;
+    font-family: "DINish", sans-serif;
+    overflow: visible;
+  }
+  h1 {
+    background: black;
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+  }
+  .banner {
+    background: url("img/banner-bg.png") #eb7399 no-repeat fixed center top;
+    height: var(--banner-height);
+  }
+  .ground {
+    background: url("img/ground.png") center;
+    height: 16px;
+    position: relative;
+    top: calc(var(--banner-height) - 16px);
+  }
+  .background {
+    background: linear-gradient(black, var(--blue));
+    min-height: calc(100vh - var(--banner-height));
+    padding: 0 5vw;
+  }
+  .main {
+    background: white;
+    margin: 0 auto;
+    color: black;
+    width: 800px;
+    max-width: 100%;
+    min-height: calc(100vh - var(--banner-height));
+  }
+  .nav {
+    text-align: center;
+  }
+  .nav a {
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 2px 8px;
+    width: 80px;
+    margin: 0 3px;
+    display: inline-block;
+    border: black solid 1px;
+  }
+  .nav a:hover {
+    text-decoration: underline;
+    background: white;
+    color: #00f;
+  }
+  .nav .disabled {
+	  background: #aaa;
+	  border-color: #aaa;
+  }
+  .nav .disabled:hover {
+	  color: white;
+	  background: #aaa;
+	  border-color: #aaa;
+	  text-decoration: none;
+  }
+  h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .date {
+	  font-family: 'Courier New', Courier, monospace;
+	  float: right;
+	  background: #eee;
+	  width: fit-content;
+	  display: block;
+	  padding: 4px;
+    margin: 20px;
+    margin-top: -100px;
+  }
+  img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  }
+  .blatherbox {
+    background: #fdb302;
+    border: #fff700 solid;
+    padding: 0 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+	width: 360px;
+	margin: 0 auto;
+  }
+  .blatherbox p {
+    background: black;
+    border: #fff700 solid;
+    color: white;
+    margin: 0 0 8px;
+    padding: 4px;
+    font-size: medium;
+  }
