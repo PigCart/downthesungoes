@@ -1,6 +1,6 @@
 ---
 title: Just Turn Flipways
+permalink: /17
 ---
 
 <img src="/comic/justTurnFlipways.gif">
-Great, the first animated comic is a dumb *refrance*.

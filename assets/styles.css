@@ -33,7 +33,10 @@
     top: calc(var(--banner-height) - 16px);
   }
   .background {
-    background: linear-gradient(black, var(--blue));
+	background-color: var(--blue);
+    background-image: linear-gradient(black, var(--blue));
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
     min-height: calc(100vh - var(--banner-height));
     padding: 0 5vw;
   }
@@ -85,8 +88,6 @@
 	  width: fit-content;
 	  display: block;
 	  padding: 4px;
-    margin: 20px;
-    margin-top: -100px;
   }
   img {
   margin: 0 auto;
@@ -110,4 +111,12 @@
     margin: 0 0 8px;
     padding: 4px;
     font-size: medium;
+  }
+  .thelinks {
+	  background: #eee;
+	  padding: 4px;
+	  display: block;
+	  font-family: 'Courier New', Courier, monospace;
+	  width: fit-content;
+	  margin-bottom: 8px;
   }

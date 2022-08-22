@@ -18,22 +18,30 @@
 		<div class="main">
 			<h1>Down The Sun Goes</h1>
 			<div class="content">
-				<!-- If this is the index page, get the latest comic's title -->
+				<h2>
 				{% if page.url == "/" %}
-				<h2>{{ site.posts[0].title }}</h2>
+				{{ site.posts[0].title }}
 				{% else %}
-				<h2>{{ page.title }}</h2>
+				{{ page.title }}
 				{% endif %}
+				</h2>
 
-				<!-- If this page is a comic, include the nav buttons -->
 				{% if page.is_post %}
 				{% include navigation.html %}
 				{% endif %}
 
 				{{ content }}
-
-				<h2>Other Things:</h2>
-				<p><a href="/about">About Down The Sun Goes</a></p>
+				
+				<div class="date">
+				{% if page.url == "/" %}
+				{{ site.posts.first.date | date: "%d %B %Y"  }}
+				{% else %}
+				{{ page.date | date: "%d %B %Y" }}
+				{% endif %}
+				</div>
+			<a class="thelinks" href="https://twitter.com/pigcart">the twits</a>
+			<a class="thelinks" href="https://www.youtube.com/channel/UCHgKaMpVRpEMJItg0fHoqFQ">the tubes</a>
+			<a class="thelinks" href="https://pigc.art/">the pigsyarts</a>
 			</div>
 		</div>
 	</div>

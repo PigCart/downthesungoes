@@ -1,5 +1,6 @@
 ---
 title: I'm Arty too...
+permalink: /1
 ---
 
-<img src="/comic/im-arty-too.jpg" alt="I'm arty too" title="oh no what've I done...">
+<img src="/comic/im-arty-too.jpg" alt="I'm arty too">
